@@ -11,3 +11,4 @@ Features I plan to include:
 -backspace option for input errors
 -Floating point number input capabilities
 -CLEAR functionality
+-A clean, well-formatted README (fail so far)
