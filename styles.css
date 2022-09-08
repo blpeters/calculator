@@ -141,6 +141,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(124, 213, 216);
 }
 
 .digit {
@@ -157,26 +158,37 @@ body {
   margin: 5px;
 }
 
+#clear,
+#equals {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: larger;
+  padding: 1rem;
+  margin: 5px;
+}
+
 .digits-grid {
   display: grid;
   grid-template-columns: auto auto auto;
   margin: 10px;
-  background-color: green;
+  background-color: rgb(191, 196, 199);
+  border-radius: 5px;
 }
 
 .operators-grid {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: blue;
-  margin: 10px;
+  background-color: rgb(191, 196, 199);
+  margin: 10px 10px 10px 0px;
+  border-radius: 5px;
 }
 
 .screen {
-  background-color: yellow;
-  margin: 10px;
+  background-color: rgb(145, 160, 168);
+  margin: 10px 10px 0 10px;
   padding: 20px 10px;
   font-size: 2rem;
   text-align: end;
+  border-radius: 5px;
 }
 
 #clear {
@@ -192,6 +204,7 @@ body {
   background-color: aquamarine;
   width: 400px;
   height: auto;
+  border-radius: 10px;
 }
 
 .buttons-wrapper {

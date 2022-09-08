@@ -11,7 +11,13 @@ function Multiply(a, b) {
 }
 
 function Divide(a, b) {
-  return a / b;
+  console.log(b);
+  if (b == 0) {
+    alert("Can't divide by 0!");
+    return 0;
+  } else {
+    return a / b;
+  }
 }
 
 function Operate(operator, a, b) {
@@ -34,7 +40,7 @@ function Operate(operator, a, b) {
 }
 
 function ResetVariables(result) {
-  screenText.innerText = result;
+  screenText.innerText = Math.round(result * 10000) / 10000; //rounds number to the 10000th for display purposes only.
   firstNumber = result;
   secondNumber = undefined;
 }
@@ -48,12 +54,6 @@ let firstNumber;
 let secondNumber;
 let result;
 let equalsActive = false; //prevents multiple calculations if a user repeatedly clicks the equals button.
-
-//when a number is clicked, add it to a string UNTIL the user clicks on an operator, at which point, store it as a number in firstNumber.
-
-//select the text on the calculator screen.
-
-//listen for button presses on the digits. Change active input as additional digits are pressed.
 
 //TODO: Allow negative (-) only as the first value and decimal only once.
 
@@ -70,8 +70,12 @@ document.querySelectorAll(".digit").forEach((digit) => {
 
 //OPERATOR HANDLING (+ - * /)
 
+//TODO: Once an operator is pressed, display that button in an active state on the screen until another operator, clear, or equals is pressed.
+
 document.querySelectorAll(".operator").forEach((operator) => {
   operator.addEventListener("click", (e) => {
+    //TODO: remove any current active states and add active state to current button
+
     equalsActive = false;
     //This if statement populates the operand variables so no operations occur until we have 2 operands.
     if (!firstNumber) {
@@ -120,4 +124,10 @@ document.querySelector("#equals").addEventListener("click", (e) => {
     equalsActive = true;
     ResetVariables(result);
   }
+});
+
+//CLEAR HANDLING
+
+document.querySelector("#clear").addEventListener("click", (e) => {
+  ResetVariables(0);
 });
