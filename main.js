@@ -43,6 +43,7 @@ function ResetVariables(result) {
   screenText.innerText = Math.round(result * 10000) / 10000; //rounds number to the 10000th for display purposes only.
   firstNumber = result;
   secondNumber = undefined;
+  document.getElementById("negative").classList.remove("disabled");
 }
 
 //DOM Manipulation and populating variables.
@@ -57,6 +58,8 @@ let equalsActive = false; //prevents multiple calculations if a user repeatedly 
 
 //TODO: Allow negative (-) only as the first value and decimal only once.
 
+//DIGITS HANDLING
+
 document.querySelectorAll(".digit").forEach((digit) => {
   digit.addEventListener("click", (e) => {
     //If statement to evaluate if size of input exceeds the screen limit
@@ -64,6 +67,9 @@ document.querySelectorAll(".digit").forEach((digit) => {
       activeInput += e.target.innerText;
 
       screenText.innerText = activeInput;
+    }
+    if (activeInput != "") {
+      document.getElementById("negative").classList.add("disabled");
     }
   });
 });
@@ -129,5 +135,9 @@ document.querySelector("#equals").addEventListener("click", (e) => {
 //CLEAR HANDLING
 
 document.querySelector("#clear").addEventListener("click", (e) => {
-  ResetVariables(0);
+  screenText.innerText = 0;
+  firstNumber = "";
+  secondNumber = "";
+  activeInput = "";
+  document.getElementById("negative").classList.remove("disabled");
 });
