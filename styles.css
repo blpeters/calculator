@@ -139,20 +139,30 @@ table {
 body {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgb(124, 213, 216);
 }
 
+h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
 .digit {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: larger;
   padding: 1rem;
   margin: 5px;
 }
 
 .operator {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: larger;
   padding: 1rem;
   margin: 5px;
@@ -160,7 +170,8 @@ body {
 
 #clear,
 #equals {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: larger;
   padding: 1rem;
   margin: 5px;
@@ -189,6 +200,7 @@ body {
   font-size: 2rem;
   text-align: end;
   border-radius: 5px;
+  font-family: "Orbitron", sans-serif;
 }
 
 #clear {
@@ -205,6 +217,7 @@ body {
   width: 400px;
   height: auto;
   border-radius: 10px;
+  margin-bottom: 150px;
 }
 
 .buttons-wrapper {

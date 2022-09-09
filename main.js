@@ -43,6 +43,7 @@ function ResetVariables(result) {
   screenText.innerText = Math.round(result * 10000) / 10000; //rounds number to the 10000th for display purposes only.
   firstNumber = result;
   secondNumber = undefined;
+  result = "";
   document.getElementById("negative").classList.remove("disabled");
 }
 
@@ -139,5 +140,6 @@ document.querySelector("#clear").addEventListener("click", (e) => {
   firstNumber = "";
   secondNumber = "";
   activeInput = "";
+  result = "";
   document.getElementById("negative").classList.remove("disabled");
 });
